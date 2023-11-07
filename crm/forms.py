@@ -15,4 +15,11 @@ class EmployeeModelForm(forms.ModelForm):   #form is taken from models so views 
         model=Employees
         fields="__all__"
 
-    
+        widgets={
+            "name":forms.TextInput(attrs={"class":"form-control"}),
+            "department":forms.TextInput(attrs={"class":"form-control"}),
+            "salary":forms.NumberInput(attrs={"class":"form-control"}),
+            "email":forms.EmailInput(attrs={"class":"form-control"}),
+            "age":forms.NumberInput(attrs={"class":"form-control"}),
+            "contacts":forms.Textarea(attrs={"class":"form-control","rows":5})
+        }
