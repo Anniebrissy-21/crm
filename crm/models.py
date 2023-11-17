@@ -9,6 +9,8 @@ class Employees(models.Model):
     email=models.EmailField(unique=True)
     age=models.PositiveBigIntegerField()
     contacts=models.CharField(max_length=200,null=True)
+    profile_pic=models.ImageField(upload_to="images",null=True,blank=True)
+    dob=models.DateField(null=True,blank=True)
 
 #to replace employee object (1) as objects by its name
     def __str__(self):
